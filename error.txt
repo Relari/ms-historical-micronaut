@@ -1,0 +1,167 @@
+ __  __ _                                  _
+|  \/  (_) ___ _ __ ___  _ __   __ _ _   _| |_
+| |\/| | |/ __| '__/ _ \| '_ \ / _` | | | | __|
+| |  | | | (__| | | (_) | | | | (_| | |_| | |_
+|_|  |_|_|\___|_|  \___/|_| |_|\__,_|\__,_|\__|
+  Micronaut (v3.10.1)
+
+22:59:19.126 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+22:59:19.394 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+22:59:20.263 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+22:59:20.321 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+22:59:20.578 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+22:59:21.984 [main] INFO  o.apache.kafka.streams.StreamsConfig - StreamsConfig values:
+	acceptable.recovery.lag = 10000
+	application.id = ms-deposit-micronaut
+	application.server =
+	bootstrap.servers = [localhost:9092]
+	buffered.records.per.partition = 1000
+	built.in.metrics.version = latest
+	cache.max.bytes.buffering = 10485760
+	client.id =
+	commit.interval.ms = 30000
+	connections.max.idle.ms = 540000
+	default.deserialization.exception.handler = class org.apache.kafka.streams.errors.LogAndFailExceptionHandler
+	default.key.serde = class org.apache.kafka.common.serialization.Serdes$ByteArraySerde
+	default.production.exception.handler = class org.apache.kafka.streams.errors.DefaultProductionExceptionHandler
+	default.timestamp.extractor = class org.apache.kafka.streams.processor.FailOnInvalidTimestamp
+	default.value.serde = class org.apache.kafka.common.serialization.Serdes$ByteArraySerde
+	default.windowed.key.serde.inner = null
+	default.windowed.value.serde.inner = null
+	max.task.idle.ms = 0
+	max.warmup.replicas = 2
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	num.standby.replicas = 0
+	num.stream.threads = 1
+	partition.grouper = class org.apache.kafka.streams.processor.DefaultPartitionGrouper
+	poll.ms = 100
+	probing.rebalance.interval.ms = 600000
+	processing.guarantee = at_least_once
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	replication.factor = 1
+	request.timeout.ms = 40000
+	retries = 0
+	retry.backoff.ms = 100
+	rocksdb.config.setter = null
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	state.cleanup.delay.ms = 600000
+	state.dir = C:\Users\Relari\AppData\Local\Temp\\kafka-streams
+	task.timeout.ms = 300000
+	topology.optimization = none
+	upgrade.from = null
+	window.size.ms = null
+	windowstore.changelog.additional.retention.ms = 86400000
+
+22:59:22.005 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values:
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = ms-deposit-micronaut-f53635a3-1711-4f56-95ba-70efac23c89e-admin
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+22:59:22.226 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.8.2
+22:59:22.226 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 3146c6ff4a24cc24
+22:59:22.226 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1766375962222
+22:59:22.235 [main] INFO  o.apache.kafka.streams.KafkaStreams - stream-client [ms-deposit-micronaut-f53635a3-1711-4f56-95ba-70efac23c89e] Kafka Streams version: 2.8.2
+22:59:22.236 [main] INFO  o.apache.kafka.streams.KafkaStreams - stream-client [ms-deposit-micronaut-f53635a3-1711-4f56-95ba-70efac23c89e] Kafka Streams commit ID: 3146c6ff4a24cc24
+22:59:22.260 [main] INFO  o.apache.kafka.streams.KafkaStreams - stream-client [ms-deposit-micronaut-f53635a3-1711-4f56-95ba-70efac23c89e] Overriding number of StreamThreads to zero for global-only topology
+22:59:22.260 [main] ERROR o.apache.kafka.streams.KafkaStreams - stream-client [ms-deposit-micronaut-f53635a3-1711-4f56-95ba-70efac23c89e] Topology with no input topics will create no stream threads and no global thread.
+22:59:22.270 [main] ERROR io.micronaut.runtime.Micronaut - Error starting Micronaut server: Bean definition [org.apache.kafka.streams.KafkaStreams] could not be loaded: Error instantiating bean of type  [org.apache.kafka.streams.KafkaStreams]
+
+Message: Invalid topology: Topology has no stream threads and no global threads, must subscribe to at least one source topic or global table.
+Path Taken: KafkaStreams.kafkaStreams(String name,ConfiguredStreamBuilder builder,KafkaClientSupplier kafkaClientSupplier,KStream[] kStreams)
+io.micronaut.context.exceptions.BeanInstantiationException: Bean definition [org.apache.kafka.streams.KafkaStreams] could not be loaded: Error instantiating bean of type  [org.apache.kafka.streams.KafkaStreams]
+
+Message: Invalid topology: Topology has no stream threads and no global threads, must subscribe to at least one source topic or global table.
+Path Taken: KafkaStreams.kafkaStreams(String name,ConfiguredStreamBuilder builder,KafkaClientSupplier kafkaClientSupplier,KStream[] kStreams)
+	at io.micronaut.context.DefaultBeanContext.initializeContext(DefaultBeanContext.java:1921)
+	at io.micronaut.context.DefaultApplicationContext.initializeContext(DefaultApplicationContext.java:249)
+	at io.micronaut.context.DefaultBeanContext.readAllBeanDefinitionClasses(DefaultBeanContext.java:3326)
+	at io.micronaut.context.DefaultBeanContext.finalizeConfiguration(DefaultBeanContext.java:3684)
+	at io.micronaut.context.DefaultBeanContext.start(DefaultBeanContext.java:341)
+	at io.micronaut.context.DefaultApplicationContext.start(DefaultApplicationContext.java:194)
+	at io.micronaut.runtime.Micronaut.start(Micronaut.java:75)
+	at io.micronaut.runtime.Micronaut.run(Micronaut.java:323)
+	at io.micronaut.runtime.Micronaut.run(Micronaut.java:309)
+	at pe.francovargas.Application.main(Application.java:8)
+Caused by: io.micronaut.context.exceptions.BeanInstantiationException: Error instantiating bean of type  [org.apache.kafka.streams.KafkaStreams]
+
+Message: Invalid topology: Topology has no stream threads and no global threads, must subscribe to at least one source topic or global table.
+Path Taken: KafkaStreams.kafkaStreams(String name,ConfiguredStreamBuilder builder,KafkaClientSupplier kafkaClientSupplier,KStream[] kStreams)
+	at io.micronaut.context.DefaultBeanContext.resolveByBeanFactory(DefaultBeanContext.java:2367)
+	at io.micronaut.context.DefaultBeanContext.doCreateBean(DefaultBeanContext.java:2305)
+	at io.micronaut.context.DefaultBeanContext.doCreateBean(DefaultBeanContext.java:2251)
+	at io.micronaut.context.DefaultBeanContext.createRegistration(DefaultBeanContext.java:3016)
+	at io.micronaut.context.SingletonScope.getOrCreate(SingletonScope.java:80)
+	at io.micronaut.context.DefaultBeanContext.findOrCreateSingletonBeanRegistration(DefaultBeanContext.java:2918)
+	at io.micronaut.context.DefaultBeanContext.loadContextScopeBean(DefaultBeanContext.java:2737)
+	at io.micronaut.context.DefaultBeanContext.initializeContext(DefaultBeanContext.java:1915)
+	... 9 common frames omitted
+Caused by: org.apache.kafka.streams.errors.TopologyException: Invalid topology: Topology has no stream threads and no global threads, must subscribe to at least one source topic or global table.
+	at org.apache.kafka.streams.KafkaStreams.getNumStreamThreads(KafkaStreams.java:946)
+	at org.apache.kafka.streams.KafkaStreams.<init>(KafkaStreams.java:854)
+	at org.apache.kafka.streams.KafkaStreams.<init>(KafkaStreams.java:710)
+	at io.micronaut.configuration.kafka.streams.KafkaStreamsFactory.kafkaStreams(KafkaStreamsFactory.java:104)
+	at io.micronaut.configuration.kafka.streams.$KafkaStreamsFactory$KafkaStreams1$Definition.doBuild(Unknown Source)
+	at io.micronaut.context.AbstractInitializableBeanDefinition.build(AbstractInitializableBeanDefinition.java:769)
+	at io.micronaut.context.BeanDefinitionDelegate.build(BeanDefinitionDelegate.java:158)
+	at io.micronaut.context.DefaultBeanContext.resolveByBeanFactory(DefaultBeanContext.java:2354)
+	... 16 common frames omitted
+
+Process finished with exit code 1
